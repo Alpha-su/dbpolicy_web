@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'dbpolicy_web', # 数据库名
         'USER': 'root', # 账号
         'PASSWORD': '990211', # 密码
-        'HOST': '127.0.0.1', # HOST
+        'HOST': '121.36.22.40', # HOST
         'POST': 3306, # 端口
     }
 }
@@ -178,7 +178,9 @@ REST_FRAMEWORK = {
     ),
 }
 
+SILENCED_SYSTEM_CHECKS = ['mysql.E001']
+
 import datetime
 JWT_AUTH = {
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(hours=3),  # 设置 JWT Token 的有效时间
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(hours=1),  # 设置 JWT Token 的有效时间
 }

@@ -4,21 +4,14 @@ from django.contrib.auth.hashers import check_password
 from ..paination import MyPagination
 from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated, AllowAny
 from ..serializers.user import UserInfoSerializer
 from ..serializers import user
 from django.contrib.auth.models import User, Group
 from django.http import JsonResponse
 from rest_framework_jwt.utils import jwt_decode_handler
-from secrets import compare_digest
 
 
 class UsersApi(ListAPIView):
-    """
-    获取一组数据需要什么
-    1. model
-    2. 序列化器
-    """
     queryset = User.objects.get_queryset().order_by('id')
     serializer_class = user.UserSerializer
 
@@ -55,7 +48,6 @@ class UsersApi(ListAPIView):
 
 
 class UserHandler(APIView):
-    permission_classes = (AllowAny,)
     
     def get(self, request):
         username = request.GET.get('username', None)
