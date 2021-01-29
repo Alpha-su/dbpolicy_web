@@ -15,7 +15,7 @@ class UsersApi(ListAPIView):
     queryset = User.objects.get_queryset().order_by('id')
     serializer_class = user.UserSerializer
 
-    filter_backends = (filters.SearchFilter,) # 自定义过滤器要加进去
+    filter_backends = (filters.SearchFilter,)  # 自定义过滤器要加进去
     search_fields = ('username',)
     
     pagination_class = MyPagination

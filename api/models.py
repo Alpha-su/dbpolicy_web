@@ -34,7 +34,7 @@ class Config(models.Model):
 
 class Status(models.Model):
     # 爬虫状态表
-    config = models.OneToOneField("Config", on_delete=models.CASCADE)
+    config = models.OneToOneField("Config", on_delete=models.CASCADE, unique=True, db_index=True)
     status = models.PositiveIntegerField(default=0)  # 0待定，1等待中, 2运行中, 3已完成, 4异常终止
     pages = models.PositiveIntegerField(default=0, verbose_name="翻页数")
     counts = models.PositiveIntegerField(default=0, verbose_name="文件总数")
@@ -48,7 +48,7 @@ class Links(models.Model):
     gov = models.CharField(max_length=10, db_index=True, default="人民政府")
     title = models.CharField(max_length=512, db_index=True)
     pub_date = models.DateTimeField(blank=True, null=True, db_index=True)
-    rank = models.PositiveIntegerField(default=1, db_index=True)
+    # rank = models.PositiveIntegerField(default=1, db_index=True)
     crawl_date = models.DateTimeField(auto_now_add=True)  # 创建时间
     sub_url = models.CharField(max_length=700, unique=True)  # 子链接
     zupei_type = models.CharField(max_length=128, null=True, blank=True, db_index=True, default="")

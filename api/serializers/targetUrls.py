@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from ..models import Config, Location
 
+
 class LocationSerializer(serializers.ModelSerializer):
     
     class Meta:

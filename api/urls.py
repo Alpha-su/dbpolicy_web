@@ -1,5 +1,5 @@
 from django.urls import path, re_path
-from .apis import user, auth, targetUrls
+from .apis import user, auth, targetUrls, dataLinks
 
 
 urlpatterns = [
@@ -18,5 +18,7 @@ urlpatterns = [
     path('targetUrl/info/', targetUrls.ConfigHandle.as_view()),
     path('targetUrl/delete/', targetUrls.ConfigHandle.as_view()),
     path('targetUrl/update/', targetUrls.Configupdate.as_view()),
-    path('targetUrl/testCreate/', targetUrls.ConfigTestCreate.as_view())
+    path('targetUrl/testCreate/', targetUrls.ConfigTestCreate.as_view()),
+    # 以下都是对dataLinks的操作
+    path('dataLinks/info/', dataLinks.DataHandle.as_view()),
 ]
