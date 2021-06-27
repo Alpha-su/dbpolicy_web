@@ -17,16 +17,16 @@ class UsersApi(ListAPIView):
 
     filter_backends = (filters.SearchFilter,)  # 自定义过滤器要加进去
     search_fields = ('username',)
-    
+
     pagination_class = MyPagination
-    
+
     table_column = [
         {
             "prop": 'date_joined',
             "label": '加入时间'
         },
     ]
-    
+
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
 
@@ -34,7 +34,7 @@ class UsersApi(ListAPIView):
         if page is not None:
             serializer = self.get_serializer(page, many=True)
             return self.get_paginated_response(serializer.data)
-    
+
     def get_paginated_response(self, data):
         count = self.paginator.get_paginated_response(data)
         return Response({
@@ -48,15 +48,16 @@ class UsersApi(ListAPIView):
 
 
 class UserHandler(APIView):
-    
+
     def get(self, request):
         username = request.GET.get('username', None)
+        print(username)
         if not username:
             return JsonResponse({
                 "code": 40000,
                 "message": "请输入要更改的用户名！"
             })
-        
+
         else:
             try:
                 user_info = User.objects.get(username=username)
@@ -71,7 +72,7 @@ class UserHandler(APIView):
                     "code": 20000,
                     "data": serializer.data
                 })
-            
+
     def put(self, request):
         username = request.GET.get('username', None)
         if not username:
@@ -102,7 +103,7 @@ class UserHandler(APIView):
                     "code": 20000,
                     "message": "更新用户状态成功！"
                 })
-    
+
     def post(self, request):
         username = request.data.get('username', None)
         user_result = User.objects.filter(username=username)
@@ -133,7 +134,7 @@ class UserHandler(APIView):
                     "code": 20000,
                     "message": "用户信息添加成功！"
                 })
-    
+
     def delete(self, request):
         username = request.GET.get('username', None)
         if not username:
@@ -154,8 +155,8 @@ class UserHandler(APIView):
                     "code": 20000,
                     "message": "删除用户成功！"
                 })
-    
-    
+
+
 def get_user_info(request):
     try:
         token = request.GET.get('token')

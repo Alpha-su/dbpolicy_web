@@ -25,7 +25,7 @@ SECRET_KEY = 'ryl%a#qzvc9ei57i+1d(^a5k+4_e%h8_qwr0ob+9siyj)4=%i#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'dbpolicy_web_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # 数据库引擎
-        'NAME': 'dbpolicy_web', # 数据库名
-        'USER': 'root', # 账号
-        'PASSWORD': '990211', # 密码
-        'HOST': '121.36.22.40', # HOST
+        'NAME': 'dbpolicy', # 数据库名
+        'USER': 'policy', # 账号
+        'PASSWORD': 'policyAdmin', # 密码
+        'HOST': '121.36.33.190', # HOST
         'POST': 3306, # 端口
     }
 }
