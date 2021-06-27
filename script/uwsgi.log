@@ -1,4 +1,4 @@
-*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Jun 27 17:22:28 2021] ***
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Jun 27 19:18:40 2021] ***
 compiled with version: 7.5.0 on 27 June 2021 08:44:25
 os: Linux-4.15.0-140-generic #144-Ubuntu SMP Fri Mar 19 14:12:35 UTC 2021
 nodename: dbpolicy_data
@@ -20,227 +20,259 @@ uWSGI http bound on 192.168.0.64:8000 fd 3
 uwsgi socket 0 bound to UNIX address /root/Alphasu/dbpolicy_web_backend/script/uwsgi.sock fd 6
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 Python version: 3.8.0 (default, Feb 25 2021, 22:10:10)  [GCC 8.4.0]
-Python main interpreter initialized at 0x561e08358520
+Python main interpreter initialized at 0x55920d78c310
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 python threads support enabled
 your server socket listen backlog is limited to 100 connections
 your mercy for graceful operations on workers is 60 seconds
 mapped 324448 bytes (316 KB) for 3 cores
 *** Operational MODE: preforking ***
-WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x561e08358520 pid: 19218 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55920d78c310 pid: 12311 (default app)
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 *** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 19218)
-spawned uWSGI worker 1 (pid: 19220, cores: 1)
-spawned uWSGI worker 2 (pid: 19221, cores: 1)
-spawned uWSGI worker 3 (pid: 19222, cores: 1)
-spawned uWSGI http 1 (pid: 19223)
-[pid: 19220|app: 0|req: 1/1] 106.120.213.110 () {44 vars in 899 bytes} [Sun Jun 27 17:22:43 2021] POST /api/user/auth/ => generated 215 bytes in 655 msecs (HTTP/1.1 200) 7 headers in 202 bytes (1 switches on core 0)
-[pid: 19221|app: 0|req: 1/2] 106.120.213.110 () {40 vars in 806 bytes} [Sun Jun 27 17:23:00 2021] GET /api/users/info?username=che => generated 0 bytes in 476 msecs (HTTP/1.1 301) 5 headers in 197 bytes (1 switches on core 0)
-Unauthorized: /api/users/create/
-[pid: 19222|app: 0|req: 1/3] 106.120.213.110 () {44 vars in 905 bytes} [Sun Jun 27 17:23:59 2021] POST /api/users/create/ => generated 43 bytes in 504 msecs (HTTP/1.1 401) 9 headers in 377 bytes (1 switches on core 0)
-Forbidden: /api/users/create/
-[pid: 19220|app: 0|req: 2/4] 106.120.213.110 () {44 vars in 905 bytes} [Sun Jun 27 17:24:21 2021] POST /api/users/create/ => generated 58 bytes in 23 msecs (HTTP/1.1 403) 7 headers in 240 bytes (1 switches on core 0)
-[pid: 19221|app: 0|req: 2/5] 106.120.213.110 () {40 vars in 806 bytes} [Sun Jun 27 17:33:12 2021] GET /api/users/info?username=che => generated 0 bytes in 0 msecs (HTTP/1.1 301) 5 headers in 197 bytes (1 switches on core 0)
-Unauthorized: /api/targetUrls/info/
-[pid: 19222|app: 0|req: 2/6] 106.120.213.110 () {40 vars in 793 bytes} [Sun Jun 27 17:33:58 2021] GET /api/targetUrls/info/ => generated 43 bytes in 19 msecs (HTTP/1.1 401) 9 headers in 358 bytes (1 switches on core 0)
-Unauthorized: /api/targetUrls/info/
-[pid: 19220|app: 0|req: 3/7] 106.120.213.110 () {40 vars in 751 bytes} [Sun Jun 27 17:34:18 2021] GET /api/targetUrls/info/ => generated 43 bytes in 1 msecs (HTTP/1.1 401) 8 headers in 259 bytes (1 switches on core 0)
-[pid: 19221|app: 0|req: 3/8] 106.120.213.110 () {36 vars in 728 bytes} [Sun Jun 27 17:36:27 2021] GET /admin => generated 0 bytes in 0 msecs (HTTP/1.1 301) 5 headers in 175 bytes (1 switches on core 0)
-[pid: 19222|app: 0|req: 3/9] 106.120.213.110 () {36 vars in 730 bytes} [Sun Jun 27 17:36:27 2021] GET /admin/ => generated 0 bytes in 12 msecs (HTTP/1.1 302) 9 headers in 339 bytes (1 switches on core 0)
-[pid: 19220|app: 0|req: 4/10] 106.120.213.110 () {36 vars in 767 bytes} [Sun Jun 27 17:36:27 2021] GET /admin/login/?next=/admin/ => generated 2216 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 469 bytes (1 switches on core 0)
-Not Found: /static/admin/css/base.css
-[pid: 19221|app: 0|req: 4/11] 106.120.213.110 () {38 vars in 783 bytes} [Sun Jun 27 17:36:27 2021] GET /static/admin/css/base.css => generated 2274 bytes in 8 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+spawned uWSGI master process (pid: 12311)
+spawned uWSGI worker 1 (pid: 12313, cores: 1)
+spawned uWSGI worker 2 (pid: 12314, cores: 1)
+spawned uWSGI worker 3 (pid: 12315, cores: 1)
+spawned uWSGI http 1 (pid: 12316)
+[pid: 12313|app: 0|req: 1/1] 123.112.64.87 () {42 vars in 947 bytes} [Sun Jun 27 19:19:36 2021] GET /admin/api/ => generated 3131 bytes in 540 msecs (HTTP/1.1 200) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 12314|app: 0|req: 1/2] 123.112.64.87 () {42 vars in 947 bytes} [Sun Jun 27 19:19:39 2021] GET /admin/api/ => generated 3131 bytes in 546 msecs (HTTP/1.1 200) 8 headers in 301 bytes (1 switches on core 0)
 Not Found: /static/admin/css/nav_sidebar.css
-[pid: 19220|app: 0|req: 5/12] 106.120.213.110 () {38 vars in 797 bytes} [Sun Jun 27 17:36:27 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/css/responsive.css
-[pid: 19221|app: 0|req: 5/13] 106.120.213.110 () {38 vars in 795 bytes} [Sun Jun 27 17:36:27 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/css/login.css
-[pid: 19222|app: 0|req: 4/14] 106.120.213.110 () {38 vars in 785 bytes} [Sun Jun 27 17:36:27 2021] GET /static/admin/css/login.css => generated 2277 bytes in 9 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/nav_sidebar.js
-[pid: 19220|app: 0|req: 6/15] 106.120.213.110 () {38 vars in 778 bytes} [Sun Jun 27 17:36:27 2021] GET /static/admin/js/nav_sidebar.js => generated 2289 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /favicon.ico
-[pid: 19221|app: 0|req: 6/16] 106.120.213.110 () {38 vars in 790 bytes} [Sun Jun 27 17:36:27 2021] GET /favicon.ico => generated 2232 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-[pid: 19222|app: 0|req: 5/17] 106.120.213.110 () {48 vars in 1065 bytes} [Sun Jun 27 17:36:34 2021] POST /admin/login/?next=/admin/ => generated 0 bytes in 201 msecs (HTTP/1.1 302) 13 headers in 729 bytes (1 switches on core 0)
-[pid: 19220|app: 0|req: 7/18] 106.120.213.110 () {42 vars in 961 bytes} [Sun Jun 27 17:36:34 2021] GET /admin/ => generated 4935 bytes in 74 msecs (HTTP/1.1 200) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 12313|app: 0|req: 2/3] 123.112.64.87 () {38 vars in 824 bytes} [Sun Jun 27 19:19:40 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
 Not Found: /static/admin/css/dashboard.css
-[pid: 19222|app: 0|req: 6/19] 106.120.213.110 () {38 vars in 818 bytes} [Sun Jun 27 17:36:34 2021] GET /static/admin/css/dashboard.css => generated 2289 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/css/nav_sidebar.css
+[pid: 12314|app: 0|req: 2/4] 123.112.64.87 () {38 vars in 820 bytes} [Sun Jun 27 19:19:40 2021] GET /static/admin/css/dashboard.css => generated 2289 bytes in 7 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
 Not Found: /static/admin/css/base.css
-[pid: 19220|app: 0|req: 8/21] 106.120.213.110 () {38 vars in 808 bytes} [Sun Jun 27 17:36:34 2021] GET /static/admin/css/base.css => generated 2274 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-[pid: 19221|app: 0|req: 7/21] 106.120.213.110 () {38 vars in 822 bytes} [Sun Jun 27 17:36:34 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12315|app: 0|req: 1/5] 123.112.64.87 () {38 vars in 810 bytes} [Sun Jun 27 19:19:40 2021] GET /static/admin/css/base.css => generated 2274 bytes in 492 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
 Not Found: /static/admin/css/responsive.css
-[pid: 19222|app: 0|req: 7/22] 106.120.213.110 () {38 vars in 820 bytes} [Sun Jun 27 17:36:34 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
 Not Found: /static/admin/js/nav_sidebar.js
-[pid: 19220|app: 0|req: 9/23] 106.120.213.110 () {38 vars in 801 bytes} [Sun Jun 27 17:36:34 2021] GET /static/admin/js/nav_sidebar.js => generated 2289 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12314|app: 0|req: 3/7] 123.112.64.87 () {38 vars in 822 bytes} [Sun Jun 27 19:19:41 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12313|app: 0|req: 3/7] 123.112.64.87 () {38 vars in 805 bytes} [Sun Jun 27 19:19:41 2021] GET /static/admin/js/nav_sidebar.js => generated 2289 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+che
+Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "./api/apis/user.py", line 73, in get
+    "data": serializer.data
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 548, in data
+    ret = super().data
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 515, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/fields.py", line 1882, in to_representation
+    return method(value)
+  File "./api/serializers/user.py", line 29, in get_role
+    return Group.objects.filter(user=instance).first().name
+AttributeError: 'NoneType' object has no attribute 'name'
+[pid: 12315|app: 0|req: 2/8] 123.112.64.87 () {40 vars in 806 bytes} [Sun Jun 27 19:19:58 2021] GET /api/users/info/?username=che => generated 105265 bytes in 75 msecs (HTTP/1.1 500) 6 headers in 195 bytes (1 switches on core 0)
+[pid: 12314|app: 0|req: 4/9] 123.112.64.87 () {42 vars in 948 bytes} [Sun Jun 27 19:20:14 2021] GET /admin/api/ => generated 3131 bytes in 50 msecs (HTTP/1.1 200) 8 headers in 301 bytes (1 switches on core 0)
 Not Found: /static/admin/css/base.css
-[pid: 19221|app: 0|req: 8/24] 106.120.213.110 () {38 vars in 806 bytes} [Sun Jun 27 17:36:41 2021] GET /static/admin/css/base.css => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12313|app: 0|req: 4/10] 123.112.64.87 () {38 vars in 810 bytes} [Sun Jun 27 19:20:14 2021] GET /static/admin/css/base.css => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
 Not Found: /static/admin/css/nav_sidebar.css
-[pid: 19222|app: 0|req: 8/25] 106.120.213.110 () {38 vars in 820 bytes} [Sun Jun 27 17:36:41 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12315|app: 0|req: 3/11] 123.112.64.87 () {38 vars in 824 bytes} [Sun Jun 27 19:20:14 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
 Not Found: /static/admin/css/dashboard.css
-[pid: 19220|app: 0|req: 10/26] 106.120.213.110 () {38 vars in 817 bytes} [Sun Jun 27 17:36:41 2021] GET /static/admin/css/dashboard.css => generated 2289 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12314|app: 0|req: 5/12] 123.112.64.87 () {38 vars in 820 bytes} [Sun Jun 27 19:20:14 2021] GET /static/admin/css/dashboard.css => generated 2289 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
 Not Found: /static/admin/css/responsive.css
-[pid: 19221|app: 0|req: 9/27] 106.120.213.110 () {38 vars in 818 bytes} [Sun Jun 27 17:36:41 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12313|app: 0|req: 5/13] 123.112.64.87 () {38 vars in 822 bytes} [Sun Jun 27 19:20:14 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/nav_sidebar.js
+[pid: 12315|app: 0|req: 4/14] 123.112.64.87 () {38 vars in 805 bytes} [Sun Jun 27 19:20:14 2021] GET /static/admin/js/nav_sidebar.js => generated 2289 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12314|app: 0|req: 6/15] 123.112.64.87 () {38 vars in 861 bytes} [Sun Jun 27 19:20:22 2021] GET /admin/ => generated 4935 bytes in 27 msecs (HTTP/1.1 200) 8 headers in 301 bytes (1 switches on core 0)
+Not Found: /static/admin/css/base.css
+[pid: 12313|app: 0|req: 6/16] 123.112.64.87 () {38 vars in 806 bytes} [Sun Jun 27 19:20:22 2021] GET /static/admin/css/base.css => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/responsive.css
+[pid: 12315|app: 0|req: 5/17] 123.112.64.87 () {38 vars in 818 bytes} [Sun Jun 27 19:20:22 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/dashboard.css
+Not Found: /static/admin/css/nav_sidebar.css
+[pid: 12313|app: 0|req: 7/19] 123.112.64.87 () {38 vars in 820 bytes} [Sun Jun 27 19:20:22 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12314|app: 0|req: 7/19] 123.112.64.87 () {38 vars in 816 bytes} [Sun Jun 27 19:20:22 2021] GET /static/admin/css/dashboard.css => generated 2289 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/nav_sidebar.js
+[pid: 12315|app: 0|req: 6/20] 123.112.64.87 () {38 vars in 801 bytes} [Sun Jun 27 19:20:22 2021] GET /static/admin/js/nav_sidebar.js => generated 2289 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+che
+Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "./api/apis/user.py", line 73, in get
+    "data": serializer.data
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 548, in data
+    ret = super().data
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 515, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/fields.py", line 1882, in to_representation
+    return method(value)
+  File "./api/serializers/user.py", line 29, in get_role
+    return Group.objects.filter(user=instance).first().name
+AttributeError: 'NoneType' object has no attribute 'name'
+[pid: 12313|app: 0|req: 8/21] 123.112.64.87 () {40 vars in 806 bytes} [Sun Jun 27 19:21:37 2021] GET /api/users/info/?username=che => generated 105265 bytes in 75 msecs (HTTP/1.1 500) 6 headers in 195 bytes (1 switches on core 0)
+[pid: 12314|app: 0|req: 8/22] 123.112.64.87 () {40 vars in 892 bytes} [Sun Jun 27 19:21:58 2021] GET /admin/ => generated 4935 bytes in 27 msecs (HTTP/1.1 200) 8 headers in 301 bytes (1 switches on core 0)
+Not Found: /static/admin/css/base.css
+[pid: 12315|app: 0|req: 7/23] 123.112.64.87 () {38 vars in 806 bytes} [Sun Jun 27 19:21:58 2021] GET /static/admin/css/base.css => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/nav_sidebar.js
+[pid: 12315|app: 0|req: 8/24] 123.112.64.87 () {38 vars in 801 bytes} [Sun Jun 27 19:21:58 2021] GET /static/admin/js/nav_sidebar.js => generated 2289 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/dashboard.css
+[pid: 12314|app: 0|req: 9/25] 123.112.64.87 () {38 vars in 816 bytes} [Sun Jun 27 19:21:58 2021] GET /static/admin/css/dashboard.css => generated 2289 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/nav_sidebar.css
+[pid: 12313|app: 0|req: 9/26] 123.112.64.87 () {38 vars in 820 bytes} [Sun Jun 27 19:21:58 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/responsive.css
+[pid: 12315|app: 0|req: 9/27] 123.112.64.87 () {38 vars in 818 bytes} [Sun Jun 27 19:21:58 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12314|app: 0|req: 10/28] 123.112.64.87 () {38 vars in 861 bytes} [Sun Jun 27 19:22:10 2021] GET /admin/ => generated 4935 bytes in 27 msecs (HTTP/1.1 200) 8 headers in 301 bytes (1 switches on core 0)
+Not Found: /static/admin/css/base.css
+[pid: 12313|app: 0|req: 10/29] 123.112.64.87 () {38 vars in 806 bytes} [Sun Jun 27 19:22:10 2021] GET /static/admin/css/base.css => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/dashboard.css
+[pid: 12314|app: 0|req: 11/30] 123.112.64.87 () {38 vars in 816 bytes} [Sun Jun 27 19:22:10 2021] GET /static/admin/css/dashboard.css => generated 2289 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/nav_sidebar.css
+[pid: 12315|app: 0|req: 10/31] 123.112.64.87 () {38 vars in 820 bytes} [Sun Jun 27 19:22:10 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/responsive.css
+[pid: 12313|app: 0|req: 11/32] 123.112.64.87 () {38 vars in 818 bytes} [Sun Jun 27 19:22:10 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/nav_sidebar.js
+[pid: 12314|app: 0|req: 12/33] 123.112.64.87 () {38 vars in 801 bytes} [Sun Jun 27 19:22:10 2021] GET /static/admin/js/nav_sidebar.js => generated 2289 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/base.css
+[pid: 12315|app: 0|req: 11/34] 123.112.64.87 () {38 vars in 806 bytes} [Sun Jun 27 19:22:15 2021] GET /static/admin/css/base.css => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/nav_sidebar.css
+[pid: 12313|app: 0|req: 12/35] 123.112.64.87 () {38 vars in 820 bytes} [Sun Jun 27 19:22:15 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/dashboard.css
+[pid: 12314|app: 0|req: 13/36] 123.112.64.87 () {38 vars in 816 bytes} [Sun Jun 27 19:22:15 2021] GET /static/admin/css/dashboard.css => generated 2289 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/responsive.css
+[pid: 12315|app: 0|req: 12/37] 123.112.64.87 () {38 vars in 818 bytes} [Sun Jun 27 19:22:15 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12313|app: 0|req: 13/38] 123.112.64.87 () {40 vars in 947 bytes} [Sun Jun 27 19:22:21 2021] GET /admin/auth/user/7/change/ => generated 17059 bytes in 81 msecs (HTTP/1.1 200) 9 headers in 470 bytes (1 switches on core 0)
+Not Found: /static/admin/css/base.css
+[pid: 12314|app: 0|req: 14/39] 123.112.64.87 () {38 vars in 825 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/css/base.css => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+[pid: 12315|app: 0|req: 13/40] 123.112.64.87 () {38 vars in 838 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/vendor/jquery/jquery.js => generated 2316 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/nav_sidebar.css
+[pid: 12314|app: 0|req: 15/41] 123.112.64.87 () {38 vars in 836 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/forms.css
+[pid: 12315|app: 0|req: 14/42] 123.112.64.87 () {38 vars in 825 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/css/forms.css => generated 2277 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/css/responsive.css
+[pid: 12314|app: 0|req: 16/43] 123.112.64.87 () {38 vars in 837 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/calendar.js
+[pid: 12315|app: 0|req: 15/44] 123.112.64.87 () {38 vars in 812 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/calendar.js => generated 2280 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12313|app: 0|req: 14/45] 123.112.64.87 () {38 vars in 786 bytes} [Sun Jun 27 19:22:21 2021] GET /admin/jsi18n/ => generated 8398 bytes in 19 msecs (HTTP/1.1 200) 6 headers in 197 bytes (1 switches on core 0)
+Not Found: /static/admin/js/jquery.init.js
+Not Found: /static/admin/js/admin/DateTimeShortcuts.js
+[pid: 12315|app: 0|req: 16/47] 123.112.64.87 () {38 vars in 843 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/admin/DateTimeShortcuts.js => generated 2325 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12314|app: 0|req: 17/46] 123.112.64.87 () {38 vars in 819 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/jquery.init.js => generated 2289 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/core.js
+Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+[pid: 12315|app: 0|req: 17/49] 123.112.64.87 () {38 vars in 849 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/admin/RelatedObjectLookups.js => generated 2334 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12313|app: 0|req: 15/48] 123.112.64.87 () {38 vars in 805 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/core.js => generated 2268 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/SelectBox.js
+[pid: 12314|app: 0|req: 18/50] 123.112.64.87 () {38 vars in 815 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/SelectBox.js => generated 2283 bytes in 7 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/SelectFilter2.js
+[pid: 12315|app: 0|req: 18/51] 123.112.64.87 () {38 vars in 823 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/SelectFilter2.js => generated 2295 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/urlify.js
+[pid: 12313|app: 0|req: 16/52] 123.112.64.87 () {38 vars in 809 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/urlify.js => generated 2274 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/prepopulate.js
+[pid: 12314|app: 0|req: 19/53] 123.112.64.87 () {38 vars in 819 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/prepopulate.js => generated 2289 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/vendor/xregexp/xregexp.js
+[pid: 12315|app: 0|req: 19/54] 123.112.64.87 () {38 vars in 841 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/vendor/xregexp/xregexp.js => generated 2322 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+[pid: 12314|app: 0|req: 20/55] 123.112.64.87 () {38 vars in 837 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/vendor/jquery/jquery.js => generated 2316 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/actions.js
+[pid: 12313|app: 0|req: 17/56] 123.112.64.87 () {38 vars in 811 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/actions.js => generated 2277 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/prepopulate_init.js
+[pid: 12313|app: 0|req: 18/57] 123.112.64.87 () {38 vars in 829 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/prepopulate_init.js => generated 2304 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/nav_sidebar.js
+[pid: 12315|app: 0|req: 20/58] 123.112.64.87 () {38 vars in 819 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/nav_sidebar.js => generated 2289 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/calendar.js
+[pid: 12314|app: 0|req: 21/59] 123.112.64.87 () {38 vars in 813 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/calendar.js => generated 2280 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/jquery.init.js
+[pid: 12313|app: 0|req: 19/60] 123.112.64.87 () {38 vars in 819 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/jquery.init.js => generated 2289 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/img/icon-addlink.svg
+[pid: 12315|app: 0|req: 21/61] 123.112.64.87 () {38 vars in 875 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/img/icon-addlink.svg => generated 2298 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/change_form.js
+[pid: 12314|app: 0|req: 22/62] 123.112.64.87 () {38 vars in 819 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/change_form.js => generated 2289 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/admin/DateTimeShortcuts.js
+[pid: 12313|app: 0|req: 20/63] 123.112.64.87 () {38 vars in 843 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/admin/DateTimeShortcuts.js => generated 2325 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/core.js
+[pid: 12315|app: 0|req: 22/64] 123.112.64.87 () {38 vars in 805 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/core.js => generated 2268 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+[pid: 12314|app: 0|req: 23/65] 123.112.64.87 () {38 vars in 849 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/admin/RelatedObjectLookups.js => generated 2334 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/SelectBox.js
+[pid: 12313|app: 0|req: 21/66] 123.112.64.87 () {38 vars in 815 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/SelectBox.js => generated 2283 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/actions.js
+[pid: 12315|app: 0|req: 23/67] 123.112.64.87 () {38 vars in 811 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/actions.js => generated 2277 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/SelectFilter2.js
+[pid: 12314|app: 0|req: 24/68] 123.112.64.87 () {38 vars in 823 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/SelectFilter2.js => generated 2295 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/urlify.js
+[pid: 12313|app: 0|req: 22/69] 123.112.64.87 () {38 vars in 810 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/urlify.js => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/prepopulate.js
+[pid: 12315|app: 0|req: 24/70] 123.112.64.87 () {38 vars in 820 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/prepopulate.js => generated 2289 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/vendor/xregexp/xregexp.js
+[pid: 12314|app: 0|req: 25/71] 123.112.64.87 () {38 vars in 842 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/vendor/xregexp/xregexp.js => generated 2322 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/prepopulate_init.js
+[pid: 12314|app: 0|req: 26/72] 123.112.64.87 () {38 vars in 830 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/prepopulate_init.js => generated 2304 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+Not Found: /static/admin/js/change_form.js
+Not Found: /static/admin/css/responsive.css
+[pid: 12313|app: 0|req: 23/73] 123.112.64.87 () {38 vars in 837 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+[pid: 12315|app: 0|req: 25/74] 123.112.64.87 () {38 vars in 820 bytes} [Sun Jun 27 19:22:21 2021] GET /static/admin/js/change_form.js => generated 2289 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+che
+Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "./api/apis/user.py", line 73, in get
+    "data": serializer.data
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 548, in data
+    ret = super().data
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 515, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/fields.py", line 1882, in to_representation
+    return method(value)
+  File "./api/serializers/user.py", line 29, in get_role
+    return Group.objects.filter(user=instance).first().name
+AttributeError: 'NoneType' object has no attribute 'name'
+[pid: 12314|app: 0|req: 27/75] 123.112.64.87 () {40 vars in 806 bytes} [Sun Jun 27 19:22:37 2021] GET /api/users/info/?username=che => generated 105265 bytes in 49 msecs (HTTP/1.1 500) 6 headers in 195 bytes (1 switches on core 0)
 Not Found: /
-[pid: 19222|app: 0|req: 9/28] 106.120.213.110 () {40 vars in 898 bytes} [Sun Jun 27 17:37:02 2021] GET / => generated 2181 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-[pid: 19220|app: 0|req: 11/29] 106.120.213.110 () {40 vars in 929 bytes} [Sun Jun 27 17:37:15 2021] GET /admin/ => generated 4935 bytes in 45 msecs (HTTP/1.1 200) 8 headers in 301 bytes (1 switches on core 0)
-[pid: 19221|app: 0|req: 10/30] 106.120.213.110 () {40 vars in 932 bytes} [Sun Jun 27 17:37:18 2021] GET /admin/api/config/ => generated 28953 bytes in 251 msecs (HTTP/1.1 200) 9 headers in 470 bytes (1 switches on core 0)
-Not Found: /static/admin/css/base.css
-[pid: 19222|app: 0|req: 10/31] 106.120.213.110 () {38 vars in 819 bytes} [Sun Jun 27 17:37:18 2021] GET /static/admin/css/base.css => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/css/changelists.css
-[pid: 19220|app: 0|req: 12/32] 106.120.213.110 () {38 vars in 833 bytes} [Sun Jun 27 17:37:18 2021] GET /static/admin/css/changelists.css => generated 2295 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/jquery.init.js
-[pid: 19221|app: 0|req: 11/33] 106.120.213.110 () {38 vars in 814 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/js/jquery.init.js => generated 2289 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/css/nav_sidebar.css
-[pid: 19221|app: 0|req: 12/34] 106.120.213.110 () {38 vars in 833 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/vendor/jquery/jquery.js
-Not Found: /static/admin/css/responsive.css
-[pid: 19222|app: 0|req: 11/35] 106.120.213.110 () {38 vars in 832 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/js/vendor/jquery/jquery.js => generated 2316 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-[pid: 19220|app: 0|req: 13/36] 106.120.213.110 () {38 vars in 831 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/admin/RelatedObjectLookups.js
-[pid: 19222|app: 0|req: 12/37] 106.120.213.110 () {38 vars in 844 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/js/admin/RelatedObjectLookups.js => generated 2334 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/actions.js
-[pid: 19220|app: 0|req: 14/38] 106.120.213.110 () {38 vars in 806 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/js/actions.js => generated 2277 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-[pid: 19221|app: 0|req: 13/39] 106.120.213.110 () {38 vars in 780 bytes} [Sun Jun 27 17:37:20 2021] GET /admin/jsi18n/ => generated 8398 bytes in 30 msecs (HTTP/1.1 200) 6 headers in 197 bytes (1 switches on core 0)
-Not Found: /static/admin/js/urlify.js
-[pid: 19222|app: 0|req: 13/40] 106.120.213.110 () {38 vars in 804 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/js/urlify.js => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/prepopulate.js
-[pid: 19220|app: 0|req: 15/41] 106.120.213.110 () {38 vars in 814 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/js/prepopulate.js => generated 2289 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/vendor/xregexp/xregexp.js
-[pid: 19221|app: 0|req: 14/42] 106.120.213.110 () {38 vars in 836 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/js/vendor/xregexp/xregexp.js => generated 2322 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/core.js
-[pid: 19222|app: 0|req: 14/43] 106.120.213.110 () {38 vars in 800 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/js/core.js => generated 2268 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/vendor/jquery/jquery.js
-[pid: 19220|app: 0|req: 16/44] 106.120.213.110 () {38 vars in 832 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/js/vendor/jquery/jquery.js => generated 2316 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/nav_sidebar.js
-[pid: 19221|app: 0|req: 15/45] 106.120.213.110 () {38 vars in 814 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/js/nav_sidebar.js => generated 2289 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/jquery.init.js
-[pid: 19222|app: 0|req: 15/46] 106.120.213.110 () {38 vars in 814 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/js/jquery.init.js => generated 2289 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/core.js
-[pid: 19220|app: 0|req: 17/47] 106.120.213.110 () {38 vars in 800 bytes} [Sun Jun 27 17:37:20 2021] GET /static/admin/js/core.js => generated 2268 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/admin/RelatedObjectLookups.js
-[pid: 19221|app: 0|req: 16/48] 106.120.213.110 () {38 vars in 844 bytes} [Sun Jun 27 17:37:21 2021] GET /static/admin/js/admin/RelatedObjectLookups.js => generated 2334 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/actions.js
-[pid: 19222|app: 0|req: 16/49] 106.120.213.110 () {38 vars in 806 bytes} [Sun Jun 27 17:37:21 2021] GET /static/admin/js/actions.js => generated 2277 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/urlify.js
-[pid: 19220|app: 0|req: 18/50] 106.120.213.110 () {38 vars in 804 bytes} [Sun Jun 27 17:37:21 2021] GET /static/admin/js/urlify.js => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/prepopulate.js
-[pid: 19221|app: 0|req: 17/51] 106.120.213.110 () {38 vars in 814 bytes} [Sun Jun 27 17:37:21 2021] GET /static/admin/js/prepopulate.js => generated 2289 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/vendor/xregexp/xregexp.js
-[pid: 19222|app: 0|req: 17/52] 106.120.213.110 () {38 vars in 836 bytes} [Sun Jun 27 17:37:21 2021] GET /static/admin/js/vendor/xregexp/xregexp.js => generated 2322 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/css/responsive.css
-[pid: 19220|app: 0|req: 19/53] 106.120.213.110 () {38 vars in 831 bytes} [Sun Jun 27 17:37:21 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/css/base.css
-[pid: 19221|app: 0|req: 18/54] 106.120.213.110 () {38 vars in 819 bytes} [Sun Jun 27 17:38:57 2021] GET /static/admin/css/base.css => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/css/changelists.css
-Not Found: /static/admin/css/nav_sidebar.css
-[pid: 19222|app: 0|req: 18/55] 106.120.213.110 () {38 vars in 833 bytes} [Sun Jun 27 17:38:57 2021] GET /static/admin/css/changelists.css => generated 2295 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-[pid: 19220|app: 0|req: 20/56] 106.120.213.110 () {38 vars in 833 bytes} [Sun Jun 27 17:38:57 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/css/responsive.css
-[pid: 19221|app: 0|req: 19/57] 106.120.213.110 () {38 vars in 831 bytes} [Sun Jun 27 17:38:57 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-[pid: 19222|app: 0|req: 19/58] 106.120.213.110 () {40 vars in 942 bytes} [Sun Jun 27 17:39:03 2021] GET /admin/auth/user/ => generated 11005 bytes in 126 msecs (HTTP/1.1 200) 9 headers in 470 bytes (1 switches on core 0)
-Not Found: /static/admin/css/base.css
-[pid: 19220|app: 0|req: 21/59] 106.120.213.110 () {38 vars in 818 bytes} [Sun Jun 27 17:39:03 2021] GET /static/admin/css/base.css => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/css/nav_sidebar.css
-[pid: 19221|app: 0|req: 20/60] 106.120.213.110 () {38 vars in 832 bytes} [Sun Jun 27 17:39:03 2021] GET /static/admin/css/nav_sidebar.css => generated 2295 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/css/responsive.css
-Not Found: /static/admin/css/changelists.css
-[pid: 19220|app: 0|req: 22/61] 106.120.213.110 () {38 vars in 830 bytes} [Sun Jun 27 17:39:03 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-[pid: 19222|app: 0|req: 20/62] 106.120.213.110 () {38 vars in 832 bytes} [Sun Jun 27 17:39:03 2021] GET /static/admin/css/changelists.css => generated 2295 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-[pid: 19221|app: 0|req: 21/63] 106.120.213.110 () {38 vars in 779 bytes} [Sun Jun 27 17:39:03 2021] GET /admin/jsi18n/ => generated 8398 bytes in 31 msecs (HTTP/1.1 200) 6 headers in 197 bytes (1 switches on core 0)
-Not Found: /static/admin/js/vendor/jquery/jquery.js
-[pid: 19220|app: 0|req: 23/64] 106.120.213.110 () {38 vars in 831 bytes} [Sun Jun 27 17:39:03 2021] GET /static/admin/js/vendor/jquery/jquery.js => generated 2316 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/jquery.init.js
-[pid: 19222|app: 0|req: 21/65] 106.120.213.110 () {38 vars in 813 bytes} [Sun Jun 27 17:39:03 2021] GET /static/admin/js/jquery.init.js => generated 2289 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/actions.js
-[pid: 19222|app: 0|req: 22/66] 106.120.213.110 () {38 vars in 805 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/js/actions.js => generated 2277 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/core.js
-Not Found: /static/admin/js/admin/RelatedObjectLookups.js
-[pid: 19220|app: 0|req: 24/67] 106.120.213.110 () {38 vars in 799 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/js/core.js => generated 2268 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-[pid: 19221|app: 0|req: 22/68] 106.120.213.110 () {38 vars in 843 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/js/admin/RelatedObjectLookups.js => generated 2334 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/urlify.js
-[pid: 19220|app: 0|req: 25/69] 106.120.213.110 () {38 vars in 803 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/js/urlify.js => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/prepopulate.js
-[pid: 19222|app: 0|req: 23/70] 106.120.213.110 () {38 vars in 813 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/js/prepopulate.js => generated 2289 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/vendor/xregexp/xregexp.js
-[pid: 19221|app: 0|req: 23/71] 106.120.213.110 () {38 vars in 835 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/js/vendor/xregexp/xregexp.js => generated 2322 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/admin/RelatedObjectLookups.js
-[pid: 19220|app: 0|req: 26/72] 106.120.213.110 () {38 vars in 843 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/js/admin/RelatedObjectLookups.js => generated 2334 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/actions.js
-[pid: 19222|app: 0|req: 24/73] 106.120.213.110 () {38 vars in 805 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/js/actions.js => generated 2277 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/img/search.svg
-Not Found: /static/admin/js/nav_sidebar.js
-[pid: 19221|app: 0|req: 24/75] 106.120.213.110 () {38 vars in 813 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/js/nav_sidebar.js => generated 2289 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (2 switches on core 0)
-[pid: 19220|app: 0|req: 27/75] 106.120.213.110 () {38 vars in 857 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/img/search.svg => generated 2280 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/urlify.js
-[pid: 19222|app: 0|req: 25/76] 106.120.213.110 () {38 vars in 803 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/js/urlify.js => generated 2274 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/img/icon-yes.svg
-[pid: 19221|app: 0|req: 25/77] 106.120.213.110 () {38 vars in 861 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/img/icon-yes.svg => generated 2286 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/prepopulate.js
-[pid: 19220|app: 0|req: 28/78] 106.120.213.110 () {38 vars in 813 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/js/prepopulate.js => generated 2289 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/img/icon-no.svg
-[pid: 19222|app: 0|req: 26/79] 106.120.213.110 () {38 vars in 859 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/img/icon-no.svg => generated 2283 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/js/vendor/xregexp/xregexp.js
-[pid: 19221|app: 0|req: 26/80] 106.120.213.110 () {38 vars in 835 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/js/vendor/xregexp/xregexp.js => generated 2322 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/css/responsive.css
-[pid: 19220|app: 0|req: 29/81] 106.120.213.110 () {38 vars in 830 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/css/responsive.css => generated 2292 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-Not Found: /static/admin/img/icon-yes.svg
-Not Found: /static/admin/img/icon-no.svg
-[pid: 19222|app: 0|req: 27/83] 106.120.213.110 () {38 vars in 861 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/img/icon-yes.svg => generated 2286 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-[pid: 19221|app: 0|req: 27/83] 106.120.213.110 () {38 vars in 859 bytes} [Sun Jun 27 17:39:04 2021] GET /static/admin/img/icon-no.svg => generated 2283 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
-[pid: 19220|app: 0|req: 30/84] 106.120.213.110 () {40 vars in 793 bytes} [Sun Jun 27 17:40:00 2021] GET /api/targetUrls/info/ => generated 4782 bytes in 121 msecs (HTTP/1.1 200) 7 headers in 216 bytes (1 switches on core 0)
-[pid: 19222|app: 0|req: 28/85] 106.120.213.110 () {40 vars in 806 bytes} [Sun Jun 27 17:40:19 2021] GET /api/users/info?username=che => generated 0 bytes in 0 msecs (HTTP/1.1 301) 5 headers in 197 bytes (1 switches on core 0)
-Unauthorized: /api/targetUrl/status/
-[pid: 19221|app: 0|req: 28/86] 106.120.213.110 () {42 vars in 823 bytes} [Sun Jun 27 17:40:53 2021] PUT /api/targetUrl/status/?id=1 => generated 43 bytes in 17 msecs (HTTP/1.1 401) 9 headers in 377 bytes (1 switches on core 0)
-Forbidden: /api/targetUrl/status/
-[pid: 19220|app: 0|req: 31/87] 106.120.213.110 () {42 vars in 823 bytes} [Sun Jun 27 17:41:03 2021] PUT /api/targetUrl/status/?id=1 => generated 58 bytes in 22 msecs (HTTP/1.1 403) 7 headers in 240 bytes (1 switches on core 0)
-Forbidden: /api/targetUrl/status/
-[pid: 19222|app: 0|req: 29/88] 106.120.213.110 () {42 vars in 823 bytes} [Sun Jun 27 17:41:15 2021] PUT /api/targetUrl/status/?id=1 => generated 58 bytes in 21 msecs (HTTP/1.1 403) 7 headers in 240 bytes (1 switches on core 0)
-Unauthorized: /api/dataLinks/info/
-[pid: 19221|app: 0|req: 29/89] 106.120.213.110 () {40 vars in 988 bytes} [Sun Jun 27 17:41:36 2021] GET /api/dataLinks/info/?search=%E7%BB%8F%E6%B5%8E&zupei=all&begin_date=2016-7-12&end_date=2020-7-12&gov=%E5%8D%AB%E7%94%9F => generated 43 bytes in 18 msecs (HTTP/1.1 401) 9 headers in 358 bytes (1 switches on core 0)
-[pid: 19220|app: 0|req: 32/90] 106.120.213.110 () {40 vars in 793 bytes} [Sun Jun 27 17:41:43 2021] GET /api/targetUrls/info/ => generated 4782 bytes in 85 msecs (HTTP/1.1 200) 7 headers in 216 bytes (1 switches on core 0)
-[pid: 19222|app: 0|req: 30/91] 106.120.213.110 () {40 vars in 806 bytes} [Sun Jun 27 17:49:10 2021] GET /api/users/info?username=che => generated 0 bytes in 1 msecs (HTTP/1.1 301) 5 headers in 197 bytes (1 switches on core 0)
-Sun Jun 27 17:55:52 2021 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
-Sun Jun 27 17:55:52 2021 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
-Sun Jun 27 17:55:52 2021 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
-*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Jun 27 19:05:01 2021] ***
-compiled with version: 7.5.0 on 27 June 2021 08:44:25
-os: Linux-4.15.0-140-generic #144-Ubuntu SMP Fri Mar 19 14:12:35 UTC 2021
-nodename: dbpolicy_data
-machine: x86_64
-clock source: unix
-pcre jit disabled
-detected number of CPU cores: 4
-current working directory: /root/Alphasu/dbpolicy_web_backend/script
-writing pidfile to /root/Alphasu/dbpolicy_web_backend/script/uwsgi.pid
-detected binary path: /usr/local/bin/uwsgi
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /root/Alphasu/dbpolicy_web_backend/
-your processes number limit is 31649
-your memory page size is 4096 bytes
-detected max file descriptor number: 65535
-lock engine: pthread robust mutexes
-thunder lock: enabled
-uWSGI http bound on 192.168.0.64:8000 fd 3
-uwsgi socket 0 bound to UNIX address /root/Alphasu/dbpolicy_web_backend/script/uwsgi.sock fd 6
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-Python version: 3.8.0 (default, Feb 25 2021, 22:10:10)  [GCC 8.4.0]
-Python main interpreter initialized at 0x562cef73c430
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-python threads support enabled
-your server socket listen backlog is limited to 100 connections
-your mercy for graceful operations on workers is 60 seconds
-mapped 324448 bytes (316 KB) for 3 cores
-*** Operational MODE: preforking ***
-WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x562cef73c430 pid: 9168 (default app)
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-*** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 9168)
-spawned uWSGI worker 1 (pid: 9170, cores: 1)
-spawned uWSGI worker 2 (pid: 9171, cores: 1)
-spawned uWSGI worker 3 (pid: 9172, cores: 1)
-spawned uWSGI http 1 (pid: 9173)
-*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Jun 27 19:06:41 2021] ***
+[pid: 12313|app: 0|req: 24/76] 124.70.74.250 () {30 vars in 445 bytes} [Sun Jun 27 19:27:56 2021] GET / => generated 2181 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 173 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Jun 27 19:28:18 2021] ***
 compiled with version: 7.5.0 on 27 June 2021 08:44:25
 os: Linux-4.15.0-140-generic #144-Ubuntu SMP Fri Mar 19 14:12:35 UTC 2021
 nodename: dbpolicy_data
@@ -260,3 +292,110 @@ lock engine: pthread robust mutexes
 thunder lock: enabled
 probably another instance of uWSGI is running on the same address (192.168.0.64:8000).
 bind(): Address already in use [core/socket.c line 769]
+che
+Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "./api/apis/user.py", line 73, in get
+    "data": serializer.data
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 548, in data
+    ret = super().data
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 515, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/fields.py", line 1882, in to_representation
+    return method(value)
+  File "./api/serializers/user.py", line 29, in get_role
+    return Group.objects.filter(user=instance).first().name
+AttributeError: 'NoneType' object has no attribute 'name'
+[pid: 12315|app: 0|req: 26/77] 123.112.64.87 () {40 vars in 806 bytes} [Sun Jun 27 19:28:25 2021] GET /api/users/info/?username=che => generated 105265 bytes in 82 msecs (HTTP/1.1 500) 6 headers in 195 bytes (1 switches on core 0)
+che
+Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "./api/apis/user.py", line 73, in get
+    "data": serializer.data
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 548, in data
+    ret = super().data
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/serializers.py", line 515, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python3.8/dist-packages/rest_framework/fields.py", line 1882, in to_representation
+    return method(value)
+  File "./api/serializers/user.py", line 29, in get_role
+    return Group.objects.filter(user=instance).first()
+AttributeError: 'NoneType' object has no attribute 'name'
+[pid: 12314|app: 0|req: 28/78] 106.120.213.110 () {40 vars in 808 bytes} [Sun Jun 27 19:30:43 2021] GET /api/users/info/?username=che => generated 105249 bytes in 54 msecs (HTTP/1.1 500) 6 headers in 195 bytes (1 switches on core 0)
+Sun Jun 27 19:32:12 2021 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 27 19:32:12 2021 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Jun 27 19:32:12 2021 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Jun 27 19:32:18 2021] ***
+compiled with version: 7.5.0 on 27 June 2021 08:44:25
+os: Linux-4.15.0-140-generic #144-Ubuntu SMP Fri Mar 19 14:12:35 UTC 2021
+nodename: dbpolicy_data
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /root/Alphasu/dbpolicy_web_backend/script
+writing pidfile to /root/Alphasu/dbpolicy_web_backend/script/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/Alphasu/dbpolicy_web_backend/
+your processes number limit is 31649
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on 192.168.0.64:8000 fd 3
+uwsgi socket 0 bound to UNIX address /root/Alphasu/dbpolicy_web_backend/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.0 (default, Feb 25 2021, 22:10:10)  [GCC 8.4.0]
+Python main interpreter initialized at 0x5632270b2520
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 324448 bytes (316 KB) for 3 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5632270b2520 pid: 14066 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14066)
+spawned uWSGI worker 1 (pid: 14068, cores: 1)
+spawned uWSGI worker 2 (pid: 14069, cores: 1)
+spawned uWSGI worker 3 (pid: 14070, cores: 1)
+spawned uWSGI http 1 (pid: 14071)
+[pid: 14068|app: 0|req: 1/1] 106.120.213.110 () {40 vars in 808 bytes} [Sun Jun 27 19:32:29 2021] GET /api/users/info/?username=che => generated 58 bytes in 520 msecs (HTTP/1.1 200) 7 headers in 233 bytes (1 switches on core 0)
