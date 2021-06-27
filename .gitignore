@@ -1,0 +1,3 @@
+/script/uwsgi.log
+/script/uwsgi.pid
+/script/uwsgi.sock
