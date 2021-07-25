@@ -1,3 +1,12 @@
 /script/uwsgi.log
 /script/uwsgi.pid
 /script/uwsgi.sock
+
+# frontend ignore
+/frontend/node_modles/
+/frontend/dist
+/frontend/package-lock.json
+
+# editor files
+.vscode
+.idea

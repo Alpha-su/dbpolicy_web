@@ -7,14 +7,13 @@ from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.serializers import User
-from crawl import test_page
 from ..models import Config, Location
 from ..paination import MyPagination
 from ..serializers import targetUrls
 
 
 class targetUrlFilter(filters.BaseFilterBackend):
-    
+
     def query_loc_and_gov(self, qs, loc, gov):
         if not loc:
             loc_result = qs
@@ -27,17 +26,17 @@ class targetUrlFilter(filters.BaseFilterBackend):
             gov_list = [Q(gov=item) for item in gov.split(',')]
             gov_result = qs.filter(reduce(operator.or_, gov_list))
         return gov_result & loc_result
-    
+
     def filter_queryset(self, request, queryset, view):
         target_url = request.query_params.get('target_url', '')
         loc = request.query_params.get('loc', '')
         gov = request.query_params.get('gov', '')
         is_active = request.query_params.get('status', '')
-        
+
         if not (target_url or loc or gov or is_active):
             return queryset
         base_qs = queryset
-        
+
         if target_url:
             base_qs = Config.objects.filter(target_url__icontains=target_url)
             if loc or gov:
@@ -46,7 +45,7 @@ class targetUrlFilter(filters.BaseFilterBackend):
                 return base_qs
         else:
             base_qs = self.query_loc_and_gov(base_qs, loc, gov)
-        
+
         if is_active:
             return base_qs.filter(is_active=int(is_active))
         else:
@@ -56,11 +55,11 @@ class targetUrlFilter(filters.BaseFilterBackend):
 class targetUrlsApi(ListAPIView):
     queryset = Config.objects.get_queryset().order_by('id')
     serializer_class = targetUrls.targetUrlSerializer
-    
+
     filter_backends = (targetUrlFilter,)
-    
+
     pagination_class = MyPagination
-    
+
     table_column = [
         {
             "prop": 'item_pattern',
@@ -91,15 +90,15 @@ class targetUrlsApi(ListAPIView):
             "label": '预执行动作'
         },
     ]
-    
+
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
-        
+
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)
             return self.get_paginated_response(serializer.data)
-    
+
     def get_paginated_response(self, data):
         count = self.paginator.get_paginated_response(data)
         return Response({
@@ -113,7 +112,7 @@ class targetUrlsApi(ListAPIView):
 
 
 class ConfigHandle(APIView):
-    
+
     def delete(self, request):
         id = request.query_params.get('id', None)
         if not id:
@@ -135,7 +134,7 @@ class ConfigHandle(APIView):
                     "code": 20000,
                     "message": "删除网站成功！"
                 })
-    
+
     def get(self, request):
         id = request.query_params.get('id', None)
         if not id:
@@ -143,7 +142,7 @@ class ConfigHandle(APIView):
                 "code": 40000,
                 "message": "请输入要查询的网站id！"
             })
-        
+
         else:
             try:
                 url_config = Config.objects.get(pk=id)
@@ -158,7 +157,7 @@ class ConfigHandle(APIView):
                     "code": 20000,
                     "data": serializer.data
                 })
-    
+
     def put(self, request):
         id = request.query_params.get('id', None)
         if not id:
@@ -169,7 +168,8 @@ class ConfigHandle(APIView):
         else:
             try:
                 config_url = Config.objects.get(pk=id)
-                Config.objects.filter(pk=id).update(is_active=not config_url.is_active)
+                Config.objects.filter(pk=id).update(
+                    is_active=not config_url.is_active)
             except Exception as e:
                 print(e)
                 return Response({
@@ -181,7 +181,7 @@ class ConfigHandle(APIView):
                     "code": 20000,
                     "message": "更新网站状态成功！"
                 })
-    
+
     def post(self, request):
         author = request.query_params.get('author', None)
         loc = request.data.get('loc', None)
@@ -202,7 +202,8 @@ class ConfigHandle(APIView):
             loc_obj = Location.objects.get(code=loc)
         except Exception:
             try:
-                loc_obj = Location.objects.create(code=loc, province=province, city=city, file_count=0)
+                loc_obj = Location.objects.create(
+                    code=loc, province=province, city=city, file_count=0)
             except Exception:
                 return Response({
                     "code": 40000,
@@ -248,7 +249,7 @@ class Configupdate(APIView):
                 Config.objects.filter(pk=id).update(target_url=target_url, zupei_type=zupei_type,
                                                     item_pattern=item_pattern, main_text_pattern=main_text_pattern,
                                                     date_pattern=date_pattern, source_pattern=source_pattern,
-                                                    next_pattern=next_button, action_pattern=action,title_pattern=title_pattern)
+                                                    next_pattern=next_button, action_pattern=action, title_pattern=title_pattern)
             except Exception as e:
                 print(e)
                 return Response({
@@ -278,7 +279,8 @@ class ConfigTestCreate(APIView):
         next_button = request.data.get('next_button', None)
         action = request.data.get('action', None)
         author_obj = User.objects.get(username=author)
-        exists = Config.objects.filter(Q(target_url="{}".format(target_url)) & Q(action_pattern="{}".format(action))).exists()
+        exists = Config.objects.filter(Q(target_url="{}".format(target_url)) & Q(
+            action_pattern="{}".format(action))).exists()
         if exists:
             return Response({
                 "code": 40000,

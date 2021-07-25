@@ -10,11 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+import datetime
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -51,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware', # 注意顺序
+    'django.middleware.common.CommonMiddleware',  # 注意顺序
 ]
 
 ROOT_URLCONF = 'dbpolicy_web_backend.urls'
@@ -59,8 +60,7 @@ ROOT_URLCONF = 'dbpolicy_web_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,12 +81,12 @@ WSGI_APPLICATION = 'dbpolicy_web_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', # 数据库引擎
-        'NAME': 'dbpolicy', # 数据库名
-        'USER': 'policy', # 账号
-        'PASSWORD': 'policyAdmin', # 密码
-        'HOST': '121.36.33.190', # HOST
-        'POST': 3306, # 端口
+        'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
+        'NAME': 'dbpolicy',  # 数据库名
+        'USER': 'policy',  # 账号
+        'PASSWORD': 'policyAdmin',  # 密码
+        'HOST': '121.36.33.190',  # HOST
+        'POST': 3306,  # 端口
     }
 }
 
@@ -129,7 +129,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#跨域增加忽略
+# 跨域增加忽略
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -163,7 +163,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:8000',
     'http://localhost:8080',
     'http://localhost:9528',
-    ]
+]
 
 # CORS_ORIGIN_ALLOW_ALL = True
 
@@ -180,7 +180,6 @@ REST_FRAMEWORK = {
 
 SILENCED_SYSTEM_CHECKS = ['mysql.E001']
 
-import datetime
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(hours=1),  # 设置 JWT Token 的有效时间
 }

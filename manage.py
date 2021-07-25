@@ -1,3 +1,11 @@
+'''
+Author: glsu
+Date: 2021-07-25 12:33:16
+LastEditTime: 2021-07-25 12:33:24
+Description:
+FilePath: /dbpolicy_web/manage.py
+'''
+
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
