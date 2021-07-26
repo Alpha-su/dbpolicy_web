@@ -49,7 +49,7 @@ pyasn1==0.4.2
 pyasn1-modules==0.2.1
 pycrypto==2.6.1
 pyee==8.1.0
-Pygments==2.2.0
+Pygments==2.7.4
 pygobject==3.26.1
 pyLDAvis==3.3.1
 PyMySQL==0.8.0
