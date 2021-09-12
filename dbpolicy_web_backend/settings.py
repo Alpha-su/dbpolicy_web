@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'dbpolicy',  # 数据库名
         'USER': 'policy',  # 账号
         'PASSWORD': 'policyAdmin',  # 密码
-        'HOST': '121.36.33.190',  # HOST
+        'HOST': 'pl.data',  # HOST
         'POST': 3306,  # 端口
     }
 }
@@ -159,10 +159,8 @@ CORS_ALLOW_HEADERS = (
 )
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-    'http://localhost:8000',
-    'http://localhost:8080',
-    'http://localhost:9528',
+    'http://localhost:9527',
+    'https://localhost:9527',
 ]
 
 # CORS_ORIGIN_ALLOW_ALL = True

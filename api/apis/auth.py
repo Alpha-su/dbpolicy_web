@@ -14,7 +14,7 @@ class AuthApi(JSONWebTokenAPIView):
     2. 序列化器
     """
     serializer_class = JSONWebTokenSerializer
-    
+
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         user = request.data.get('username')
