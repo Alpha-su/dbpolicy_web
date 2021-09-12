@@ -1,5 +1,5 @@
 from django.urls import path, re_path
-from .apis import user, auth, targetUrls, dataLinks
+from .apis import user, auth, targetUrls, dataLinks, esLinks
 
 
 urlpatterns = [
@@ -21,4 +21,6 @@ urlpatterns = [
     path('targetUrl/testCreate/', targetUrls.ConfigTestCreate.as_view()),
     # 以下都是对dataLinks的操作
     path('dataLinks/info/', dataLinks.DataHandle.as_view()),
+    # es操作
+    path('esLinks/get/', esLinks.EsHandle.as_view()),
 ]
