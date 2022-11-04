@@ -79,7 +79,7 @@ ssh-import-id==5.7
 systemd-python==234
 threadpoolctl==2.1.0
 tqdm==4.60.0
-Twisted==17.9.0
+Twisted==22.10.0
 typing-extensions==3.7.4.3
 ufw==0.36
 unattended-upgrades==0.1
