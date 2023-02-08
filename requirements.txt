@@ -13,7 +13,7 @@ colorama==0.3.7
 command-not-found==0.3
 configobj==5.0.6
 constantly==15.1.0
-cryptography==3.3.2
+cryptography==39.0.1
 cycler==0.10.0
 distro-info===0.23ubuntu1
 Django==3.2.4
