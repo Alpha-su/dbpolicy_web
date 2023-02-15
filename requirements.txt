@@ -16,7 +16,7 @@ constantly==15.1.0
 cryptography==3.3.2
 cycler==0.10.0
 distro-info===0.23ubuntu1
-Django==3.2.4
+Django==3.2.18
 django-cors-headers==3.7.0
 fake-useragent==0.1.11
 funcy==1.16
